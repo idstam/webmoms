@@ -4,6 +4,7 @@ body {
 	color: #FF9900;
 	font-family: "Courier New", Courier, monospace;
     font-size: x-large;
+    margin-left: 5em;
 }
 
 input{
