@@ -1,0 +1,26 @@
+
+body {
+	background-color: #333333;
+	color: #FF9900;
+	font-family: "Courier New", Courier, monospace;
+    font-size: x-large;
+}
+
+input{
+    background-color: #333333;
+    color:#FF9900;
+    font-size: inherit;
+    border-color: #FF9900;
+    border-width: thin;
+
+}
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid;
+    margin: 1em 0;
+    padding: 0;
+    border-bottom-color: #FF9900;
+}
+

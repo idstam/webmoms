@@ -3,26 +3,87 @@
 <head>
     <meta charset="UTF-8">
     <title>Bokföringshjälp</title>
-    <!-- <link rel="stylesheet" href="../jsi.css" type="text/css" media="screen, projection" /> -->
+    <link rel="stylesheet" href="jsi.css" type="text/css" media="screen, projection"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="moms.js" ></script>
+    <script src="moms.js"></script>
 </head>
-<body>
+<body onload="document.getElementById('beloppet').select(); newNumber()">
 
-<br />
-<br />
-<br />
-<br />
+<br/>
+<br/>
+<br/>
+<br/>
+<label>Fakturabelopp <input id="beloppet" type="number" value="100" accesskey="F"
+                            autofocus onClick="this.select();"
+                            oninput="newNumber()" style="text-align: right; "/> </label>
+<br/><br/>
 
-<label>Fakturabelopp <input id="beloppet" type="number"  accesskey="F" autofocus oninput="newNumber()" /> </label>
-<br /><br />
-<label>Ex moms <input id="minusMoms" type="number"  accesskey="F" autofocus/> </label>
-<br />
-<label>Moms <input id="avdragenMoms" type="number"  accesskey="F" autofocus/> </label>
-<br /><br />
-<label>Ink moms <input id="plusMoms" type="number"  accesskey="F" autofocus/> </label>
-<br />
-<label>Moms <input id="adderadMoms" type="number" accesskey="F" autofocus/> </label>
+<table>
+    <tr>
+        <th></th>
+        <th>25%</th>
+        <th>Egen <input title="Egen momssats"
+                        type="number" id="egenMomssats" value="6" oninput="newNumber()"
+                        onClick="this.select();"
+                        style="text-align: center; width: 4em;"/> %
+        </th>
+    </tr>
+    <tr>
+        <td>Ex moms</td>
+        <td>
+            <input title="Ex moms 25%"
+                   id="minusMoms25" type="number" accesskey="F" style="text-align: right; "
+                   onClick="this.select();"/>
+        </td>
+        <td>
+            <input title="Ex egen moms"
+                   id="minusMomsEgen" type="number" accesskey="F" style="text-align: right; "
+                   onClick="this.select();"/>
+        </td>
+    </tr>
+    <tr>
+        <td>Moms</td>
+        <td>
+            <input title="Avdragen moms 25%"
+                   id="avdragenMoms25" type="number" accesskey="F" style="text-align: right; "
+                   onClick="this.select();"/>
+        </td>
+        <td>
+            <input title="Avdragen egen moms"
+                   id="avdragenMomsEgen" type="number" accesskey="F" style="text-align: right; "
+                   onClick="this.select();"/>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="3" ><hr/></td>
+    </tr>
+    <tr>
+        <td>Ink moms</td>
+        <td>
+            <input title="Ink 25% moms"
+                   id="plusMoms25" type="number" accesskey="F" style="text-align: right; "
+                   onClick="this.select();"/>
+        </td>
+        <td>
+            <input title="Ink egen moms"
+                   id="plusMomsEgen" type="number" accesskey="F" style="text-align: right; "
+                   onClick="this.select();"/>
+        </td>
+    </tr>
+    <tr>
+        <td>Moms</td>
+        <td>
+            <input title="Pålaggd 25% moms"
+                   id="adderadMoms25" type="number" accesskey="F" style="text-align: right; "
+                   onClick="this.select();"/>
+        </td>
+        <td>
+            <input title="Pålaggd egen moms"
+                   id="adderadMomsEgen" type="number" accesskey="F" style="text-align: right; "
+                   onClick="this.select();"/>
+        </td>
+    </tr>
+</table>
 
 </body>
 </html>
