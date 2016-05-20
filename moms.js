@@ -16,7 +16,6 @@ var newNumber = function () {
     momssats = Number(Number(document.getElementById("egenMomssats").value) / 100);
     var momsAvdrag = Number(1 - ( 1 / (momssats + 1)));
 
-    alert(momsAvdrag);
     document.getElementById("minusMomsEgen").value = (beloppet - (beloppet * momsAvdrag)).toFixed(2) ;
     document.getElementById("avdragenMomsEgen").value = (beloppet * momsAvdrag).toFixed(2) ;
 
