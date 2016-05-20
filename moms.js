@@ -6,6 +6,7 @@ var newNumber = function () {
     //alert(txt);
     var momssats = Number(0.25);
     var momsAvdrag = Number(1 - ( 1 / (momssats + 1)));
+
     document.getElementById("minusMoms25").value = (beloppet - (beloppet * momsAvdrag)).toFixed(2) ;
     document.getElementById("avdragenMoms25").value = (beloppet * momsAvdrag).toFixed(2) ;
 
@@ -13,8 +14,9 @@ var newNumber = function () {
     document.getElementById("adderadMoms25").value = (beloppet * momssats).toFixed(2) ;
 
     momssats = Number(Number(document.getElementById("egenMomssats").value) / 100);
-    momsAvdrag = (100 / (Number(document.getElementById("egenMomssats").value) + 100)).toFixed(2);
+    var momsAvdrag = Number(1 - ( 1 / (momssats + 1)));
 
+    alert(momsAvdrag);
     document.getElementById("minusMomsEgen").value = (beloppet - (beloppet * momsAvdrag)).toFixed(2) ;
     document.getElementById("avdragenMomsEgen").value = (beloppet * momsAvdrag).toFixed(2) ;
 
